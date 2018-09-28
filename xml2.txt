@@ -1,0 +1,945 @@
+<IRO ID="14920718690225127066060187140635" NAME="Coffee Store3" TYPE="ANALYTICAL" SUBTYPE="CUBE" FOLDER_ID="folder_14806829247574127051095174652540" FOLDER_NAME="2.2 Meenal" ACCESSRIGHTS="1" OWNERAPPID="Admin" OWNERAPPNAME="Admin" REPOSITDATE="10/27/2017 05:05:15">
+    <ATTR NAME="DRD_ID">
+        <VALUE>
+            <![CDATA[DRD_14423826925078127084069174590854]]>
+        </VALUE>
+    </ATTR>
+    <ATTR NAME="DRD_NAME">
+        <VALUE>
+            <![CDATA[Coffee Store]]>
+        </VALUE>
+    </ATTR>
+</ATTRS>
+<CUBEOBJECT>
+    <MEASURES>
+	<MEASURE DATATYPE="NUMBER" DISPLAY_FOLDER="" ID="MEASURE_34" ISDEFAULT="false" ISVISIBLE="true" SOLVE_ORDER="0">
+            <UNIQUENAME>
+                <![CDATA[MEASURE_34]]>
+            </UNIQUENAME>
+            <NAME>
+                <![CDATA[Target Sales]]>
+            </NAME>
+            <FORMAT USEDEFAULT="0">
+                <![CDATA[$#,##0]]>
+            </FORMAT>
+            <FORMATTYPE>
+                <![CDATA[3]]>
+            </FORMATTYPE>
+            <UNIT/>
+            <DATAFIELD QUERY_ID="14423825035413127093052152974199_0" QUERY_NAME="Coffee Store">
+                <![CDATA[Sales]]>
+            </DATAFIELD>
+            <EXPRESSION NON_EMPTY_BEHAVIOR="BY_MEASURE"/>
+            <SUMMARYFUNCTION>
+                <![CDATA[0]]>
+            </SUMMARYFUNCTION>
+        </MEASURE>
+        <MEASURE DATATYPE="NUMBER" DISPLAY_FOLDER="" ID="MEASURE_102" ISDEFAULT="false" ISVISIBLE="true" SOLVE_ORDER="0">
+            <UNIQUENAME>
+                <![CDATA[MEASURE_102]]>
+            </UNIQUENAME>
+            <NAME>
+                <![CDATA[Count_Measure]]>
+            </NAME>
+            <FORMAT USEDEFAULT="0">
+                <![CDATA[#,##0.00]]>
+            </FORMAT>
+            <FORMATTYPE>
+                <![CDATA[2]]>
+            </FORMATTYPE>
+            <UNIT/>
+            <DATAFIELD QUERY_ID="" QUERY_NAME=""/>
+            <EXPRESSION NON_EMPTY_BEHAVIOR="BY_MEASURE">
+                <![CDATA[Count(Filter([Market].[Hierarchy].[Market Size].Members, MeasureFilter([Measures].[Target Sales],'>',100000) ))]]>
+            </EXPRESSION>
+        </MEASURE>
+</MEASURES>
+    <DIMENSIONS>
+        <DIMENSION ID="DIM_21">
+            <NAME>
+                <![CDATA[Market]]>
+            </NAME>
+            <TYPE>
+                <![CDATA[Regular]]>
+            </TYPE>           
+            <HIERARCHIES>
+                <HIERARCHY>
+                    <UNIQUENAME>
+                        <![CDATA[DIMENSION_HIERARCHY_24]]>
+                    </UNIQUENAME>
+                    <NAME>
+                        <![CDATA[Hierarchy]]>
+                    </NAME>
+                    <ALLMEMBERUNIQUENAME/>
+                    <LEVELS>
+                        <LEVEL DATATYPE="CHAR">
+                            <UNIQUENAME>
+                                <![CDATA[DIMENSION_LEVEL_49]]>
+                            </UNIQUENAME>
+                            <NAME>
+                                <![CDATA[Market]]>
+                            </NAME>
+                            <FULLY_QUALIFIED_NAME/>
+                            <DATAFIELD QUERY_ID="14423825035413127093052152974199_0" QUERY_NAME="Coffee Store">
+                                <![CDATA[Market]]>
+                            </DATAFIELD>
+                            <DISPLAYFIELD QUERY_ID="" QUERY_NAME=""/>
+                            <HASTIMEINDATEFORMAT>
+                                <![CDATA[false]]>
+                            </HASTIMEINDATEFORMAT>
+                        </LEVEL>
+                        <LEVEL DATATYPE="CHAR">
+                            <UNIQUENAME>
+                                <![CDATA[DIMENSION_LEVEL_35]]>
+                            </UNIQUENAME>
+                            <NAME>
+                                <![CDATA[Market Size]]>
+                            </NAME>
+                            <FULLY_QUALIFIED_NAME/>
+                            <DATAFIELD QUERY_ID="14423825035413127093052152974199_0" QUERY_NAME="Coffee Store">
+                                <![CDATA[Market Size]]>
+                            </DATAFIELD>
+                            <HASTIMEINDATEFORMAT>
+                                <![CDATA[false]]>
+                            </HASTIMEINDATEFORMAT>
+                        </LEVEL>
+                        <LEVEL DATATYPE="CHAR">
+                            <UNIQUENAME>
+                                <![CDATA[DIMENSION_LEVEL_36]]>
+                            </UNIQUENAME>
+                            <NAME>
+                                <![CDATA[Market Condition]]>
+                            </NAME>
+                            <FULLY_QUALIFIED_NAME/>
+                            <DATAFIELD QUERY_ID="14423825035413127093052152974199_1" QUERY_NAME="Coffee Store">
+                                <![CDATA[Market Condition]]>
+                            </DATAFIELD>
+                            <DISPLAYFIELD QUERY_ID="" QUERY_NAME=""/>
+                            <DATEDATATYPE/>
+                            <FIELDDATATYPE/>
+                            <GEOROLE/>
+                            <MAPLEVEL/>
+                            <HASTIMEINDATEFORMAT>
+                                <![CDATA[false]]>
+                            </HASTIMEINDATEFORMAT>
+                        </LEVEL>
+                    </LEVELS>
+                </HIERARCHY>
+            </HIERARCHIES>
+            <ATTRS></ATTRS>
+            <CALC_MEMBERS></CALC_MEMBERS>
+        </DIMENSION>
+        <DIMENSION ID="DIM_23">
+            <UNIQUENAME>
+                <![CDATA[DIM_23]]>
+            </UNIQUENAME>
+            <NAME>
+                <![CDATA[Product]]>
+            </NAME>
+            <TYPE>
+                <![CDATA[Regular]]>
+            </TYPE>
+            <PREDEF_TIME_HIERARCHY/>
+            <DATAFIELD QUERY_ID="" QUERY_NAME="">
+                <![CDATA[null]]>
+            </DATAFIELD>
+            <HIERARCHIES>
+                <HIERARCHY>
+                    <UNIQUENAME>
+                        <![CDATA[DIMENSION_HIERARCHY_28]]>
+                    </UNIQUENAME>
+                    <NAME>
+                        <![CDATA[Hierarchy]]>
+                    </NAME>
+                    <ALLMEMBERUNIQUENAME/>
+                    <LEVELS>
+                        <LEVEL DATATYPE="" ISALL="true" MAPTYPE="">
+                            <UNIQUENAME>
+                                <![CDATA[DIMENSION_LEVEL_447603550]]>
+                            </UNIQUENAME>
+                            <NAME>
+                                <![CDATA[Hierarchy.ALL]]>
+                            </NAME>
+                            <DATAFIELD QUERY_ID=""/>
+                            <DISPLAYFIELD QUERY_ID=""/>
+                            <PROPERTIES/>
+                        </LEVEL>
+                        <LEVEL DATATYPE="CHAR">
+                            <UNIQUENAME>
+                                <![CDATA[DIMENSION_LEVEL_41]]>
+                            </UNIQUENAME>
+                            <NAME>
+                                <![CDATA[Product Line]]>
+                            </NAME>
+                            <FULLY_QUALIFIED_NAME/>
+                            <DATAFIELD QUERY_ID="14423825035413127093052152974199_0" QUERY_NAME="Coffee Store">
+                                <![CDATA[Product Line]]>
+                            </DATAFIELD>
+                            <DISPLAYFIELD QUERY_ID="" QUERY_NAME=""/>
+                            <DATEDATATYPE/>
+                            <FIELDDATATYPE/>
+                            <GEOROLE/>
+                            <MAPLEVEL/>
+                            <HASTIMEINDATEFORMAT>
+                                <![CDATA[false]]>
+                            </HASTIMEINDATEFORMAT>
+                        </LEVEL>
+                        <LEVEL DATATYPE="CHAR">
+                            <UNIQUENAME>
+                                <![CDATA[DIMENSION_LEVEL_44]]>
+                            </UNIQUENAME>
+                            <NAME>
+                                <![CDATA[Product Type]]>
+                            </NAME>
+                            <FULLY_QUALIFIED_NAME/>
+                            <DATAFIELD QUERY_ID="14423825035413127093052152974199_0" QUERY_NAME="Coffee Store">
+                                <![CDATA[Product Type]]>
+                            </DATAFIELD>
+                            <DISPLAYFIELD QUERY_ID="" QUERY_NAME=""/>
+                            <DATEDATATYPE/>
+                            <FIELDDATATYPE/>
+                            <GEOROLE/>
+                            <MAPLEVEL/>
+                            <HASTIMEINDATEFORMAT>
+                                <![CDATA[false]]>
+                            </HASTIMEINDATEFORMAT>
+                        </LEVEL>
+                    </LEVELS>
+                </HIERARCHY>
+            </HIERARCHIES>
+            <ATTRS></ATTRS>
+            <CALC_MEMBERS></CALC_MEMBERS>
+        </DIMENSION>
+        <DIMENSION ID="DIM_24">
+            <UNIQUENAME>
+                <![CDATA[DIM_24]]>
+            </UNIQUENAME>
+            <NAME>
+                <![CDATA[Location]]>
+            </NAME>
+            <TYPE>
+                <![CDATA[Regular]]>
+            </TYPE>
+            <PREDEF_TIME_HIERARCHY/>
+            <DATAFIELD QUERY_ID="" QUERY_NAME="">
+                <![CDATA[null]]>
+            </DATAFIELD>
+            <HIERARCHIES>
+                <HIERARCHY>
+                    <UNIQUENAME>
+                        <![CDATA[DIMENSION_HIERARCHY_30]]>
+                    </UNIQUENAME>
+                    <NAME>
+                        <![CDATA[Hierarchy]]>
+                    </NAME>
+                    <ALLMEMBERUNIQUENAME/>
+                    <LEVELS>
+                        <LEVEL DATATYPE="" ISALL="true" MAPTYPE="">
+                            <UNIQUENAME>
+                                <![CDATA[DIMENSION_LEVEL_109393230]]>
+                            </UNIQUENAME>
+                            <NAME>
+                                <![CDATA[Hierarchy.ALL]]>
+                            </NAME>
+                            <DATAFIELD QUERY_ID=""/>
+                            <DISPLAYFIELD QUERY_ID=""/>
+                            <PROPERTIES/>
+                        </LEVEL>
+                        <LEVEL DATATYPE="CHAR">
+                            <UNIQUENAME>
+                                <![CDATA[DIMENSION_LEVEL_89]]>
+                            </UNIQUENAME>
+                            <NAME>
+                                <![CDATA[State]]>
+                            </NAME>
+                            <FULLY_QUALIFIED_NAME/>
+                            <DATAFIELD QUERY_ID="14423825035413127093052152974199_0" QUERY_NAME="Coffee Store">
+                                <![CDATA[State]]>
+                            </DATAFIELD>
+                            <DISPLAYFIELD QUERY_ID="" QUERY_NAME=""/>
+                            <DATEDATATYPE/>
+                            <FIELDDATATYPE/>
+                            <GEOROLE/>
+                            <MAPLEVEL/>
+                            <HASTIMEINDATEFORMAT>
+                                <![CDATA[false]]>
+                            </HASTIMEINDATEFORMAT>
+                        </LEVEL>
+                    </LEVELS>
+                </HIERARCHY>
+            </HIERARCHIES>
+            <ATTRS></ATTRS>
+            <CALC_MEMBERS></CALC_MEMBERS>
+        </DIMENSION>
+        <DIMENSION ID="DIM_25">
+            <UNIQUENAME>
+                <![CDATA[DIM_25]]>
+            </UNIQUENAME>
+            <NAME>
+                <![CDATA[YMD Date]]>
+            </NAME>
+            <TYPE>
+                <![CDATA[Time]]>
+            </TYPE>
+            <PREDEF_TIME_HIERARCHY>
+                <![CDATA[Y-M-D]]>
+            </PREDEF_TIME_HIERARCHY>
+            <DATAFIELD QUERY_ID="14423834052017127075039118447550_0" QUERY_NAME="">
+                <![CDATA[Date]]>
+            </DATAFIELD>
+            <HIERARCHIES>
+                <HIERARCHY>
+                    <UNIQUENAME>
+                        <![CDATA[DIMENSION_HIERARCHY_32]]>
+                    </UNIQUENAME>
+                    <NAME>
+                        <![CDATA[Year-Month-Day]]>
+                    </NAME>
+                    <ALLMEMBERUNIQUENAME/>
+                    <LEVELS>
+                        <LEVEL DATATYPE="" ISALL="true" MAPTYPE="">
+                            <UNIQUENAME>
+                                <![CDATA[DIMENSION_LEVEL_443372572]]>
+                            </UNIQUENAME>
+                            <NAME>
+                                <![CDATA[Hierarchy.ALL]]>
+                            </NAME>
+                            <DATAFIELD QUERY_ID=""/>
+                            <DISPLAYFIELD QUERY_ID=""/>
+                            <PROPERTIES/>
+                        </LEVEL>
+                        <LEVEL DATATYPE="DATE">
+                            <UNIQUENAME>
+                                <![CDATA[DIMENSION_LEVEL_53]]>
+                            </UNIQUENAME>
+                            <NAME>
+                                <![CDATA[Year]]>
+                            </NAME>
+                            <FULLY_QUALIFIED_NAME/>
+                            <DATAFIELD QUERY_ID="14423825035413127093052152974199_0" QUERY_NAME="Coffee Store">
+                                <![CDATA[Date]]>
+                            </DATAFIELD>
+                            <DISPLAYFIELD QUERY_ID="" QUERY_NAME=""/>
+                            <DATEDATATYPE>
+                                <![CDATA[Year]]>
+                            </DATEDATATYPE>
+                            <FIELDDATATYPE/>
+                            <GEOROLE/>
+                            <MAPLEVEL/>
+                            <HASTIMEINDATEFORMAT>
+                                <![CDATA[false]]>
+                            </HASTIMEINDATEFORMAT>
+                        </LEVEL>
+                        <LEVEL DATATYPE="DATE">
+                            <UNIQUENAME>
+                                <![CDATA[DIMENSION_LEVEL_54]]>
+                            </UNIQUENAME>
+                            <NAME>
+                                <![CDATA[Month]]>
+                            </NAME>
+                            <FULLY_QUALIFIED_NAME>
+                                <![CDATA[DIMENSION_LEVEL_53]]>
+                            </FULLY_QUALIFIED_NAME>
+                            <DATAFIELD QUERY_ID="14423825035413127093052152974199_0" QUERY_NAME="Coffee Store">
+                                <![CDATA[Date]]>
+                            </DATAFIELD>
+                            <DISPLAYFIELD QUERY_ID="" QUERY_NAME=""/>
+                            <DATEDATATYPE>
+                                <![CDATA[Month]]>
+                            </DATEDATATYPE>
+                            <FIELDDATATYPE/>
+                            <GEOROLE/>
+                            <MAPLEVEL/>
+                            <HASTIMEINDATEFORMAT>
+                                <![CDATA[false]]>
+                            </HASTIMEINDATEFORMAT>
+                        </LEVEL>
+                        <LEVEL DATATYPE="DATE">
+                            <UNIQUENAME>
+                                <![CDATA[DIMENSION_LEVEL_55]]>
+                            </UNIQUENAME>
+                            <NAME>
+                                <![CDATA[Day]]>
+                            </NAME>
+                            <FULLY_QUALIFIED_NAME>
+                                <![CDATA[DIMENSION_LEVEL_53,DIMENSION_LEVEL_54]]>
+                            </FULLY_QUALIFIED_NAME>
+                            <DATAFIELD QUERY_ID="14423825035413127093052152974199_0" QUERY_NAME="Coffee Store">
+                                <![CDATA[Date]]>
+                            </DATAFIELD>
+                            <DISPLAYFIELD QUERY_ID="" QUERY_NAME=""/>
+                            <DATEDATATYPE>
+                                <![CDATA[Day]]>
+                            </DATEDATATYPE>
+                            <FIELDDATATYPE/>
+                            <GEOROLE/>
+                            <MAPLEVEL/>
+                            <HASTIMEINDATEFORMAT>
+                                <![CDATA[false]]>
+                            </HASTIMEINDATEFORMAT>
+                        </LEVEL>
+                    </LEVELS>
+                </HIERARCHY>
+            </HIERARCHIES>
+            <ATTRS></ATTRS>
+            <CALC_MEMBERS></CALC_MEMBERS>
+        </DIMENSION>
+        <DIMENSION ID="DIM_28">
+            <UNIQUENAME>
+                <![CDATA[DIM_28]]>
+            </UNIQUENAME>
+            <NAME>
+                <![CDATA[Complete date]]>
+            </NAME>
+            <TYPE>
+                <![CDATA[Time]]>
+            </TYPE>
+            <PREDEF_TIME_HIERARCHY>
+                <![CDATA[Y-Q-W-D]]>
+            </PREDEF_TIME_HIERARCHY>
+            <DATAFIELD QUERY_ID="14423834052017127075039118447550_0" QUERY_NAME="">
+                <![CDATA[Date]]>
+            </DATAFIELD>
+            <HIERARCHIES>
+                <HIERARCHY>
+                    <UNIQUENAME>
+                        <![CDATA[DIMENSION_HIERARCHY_38]]>
+                    </UNIQUENAME>
+                    <NAME>
+                        <![CDATA[H_Complete date]]>
+                    </NAME>
+                    <ALLMEMBERUNIQUENAME/>
+                    <LEVELS>
+                        <LEVEL DATATYPE="" ISALL="true" MAPTYPE="">
+                            <UNIQUENAME>
+                                <![CDATA[DIMENSION_LEVEL_886869737]]>
+                            </UNIQUENAME>
+                            <NAME>
+                                <![CDATA[Hierarchy.ALL]]>
+                            </NAME>
+                            <DATAFIELD QUERY_ID=""/>
+                            <DISPLAYFIELD QUERY_ID=""/>
+                            <PROPERTIES/>
+                        </LEVEL>
+                        <LEVEL DATATYPE="DATE">
+                            <UNIQUENAME>
+                                <![CDATA[DIMENSION_LEVEL_83]]>
+                            </UNIQUENAME>
+                            <NAME>
+                                <![CDATA[Year]]>
+                            </NAME>
+                            <FULLY_QUALIFIED_NAME/>
+                            <DATAFIELD QUERY_ID="14423825035413127093052152974199_0" QUERY_NAME="Coffee Store">
+                                <![CDATA[Date]]>
+                            </DATAFIELD>
+                            <DISPLAYFIELD QUERY_ID="" QUERY_NAME=""/>
+                            <DATEDATATYPE>
+                                <![CDATA[Year]]>
+                            </DATEDATATYPE>
+                            <FIELDDATATYPE/>
+                            <GEOROLE/>
+                            <MAPLEVEL/>
+                            <HASTIMEINDATEFORMAT>
+                                <![CDATA[false]]>
+                            </HASTIMEINDATEFORMAT>
+                        </LEVEL>
+                        <LEVEL DATATYPE="DATE">
+                            <UNIQUENAME>
+                                <![CDATA[DIMENSION_LEVEL_84]]>
+                            </UNIQUENAME>
+                            <NAME>
+                                <![CDATA[Quarter]]>
+                            </NAME>
+                            <FULLY_QUALIFIED_NAME>
+                                <![CDATA[DIMENSION_LEVEL_83]]>
+                            </FULLY_QUALIFIED_NAME>
+                            <DATAFIELD QUERY_ID="14423825035413127093052152974199_0" QUERY_NAME="Coffee Store">
+                                <![CDATA[Date]]>
+                            </DATAFIELD>
+                            <DISPLAYFIELD QUERY_ID="" QUERY_NAME=""/>
+                            <DATEDATATYPE>
+                                <![CDATA[Quarter]]>
+                            </DATEDATATYPE>
+                            <FIELDDATATYPE/>
+                            <GEOROLE/>
+                            <MAPLEVEL/>
+                            <HASTIMEINDATEFORMAT>
+                                <![CDATA[false]]>
+                            </HASTIMEINDATEFORMAT>
+                        </LEVEL>
+                        <LEVEL DATATYPE="DATE">
+                            <UNIQUENAME>
+                                <![CDATA[DIMENSION_LEVEL_85]]>
+                            </UNIQUENAME>
+                            <NAME>
+                                <![CDATA[Week]]>
+                            </NAME>
+                            <FULLY_QUALIFIED_NAME>
+                                <![CDATA[DIMENSION_LEVEL_83]]>
+                            </FULLY_QUALIFIED_NAME>
+                            <DATAFIELD QUERY_ID="14423825035413127093052152974199_0" QUERY_NAME="Coffee Store">
+                                <![CDATA[Date]]>
+                            </DATAFIELD>
+                            <DISPLAYFIELD QUERY_ID="" QUERY_NAME=""/>
+                            <DATEDATATYPE>
+                                <![CDATA[Week]]>
+                            </DATEDATATYPE>
+                            <FIELDDATATYPE/>
+                            <GEOROLE/>
+                            <MAPLEVEL/>
+                            <HASTIMEINDATEFORMAT>
+                                <![CDATA[false]]>
+                            </HASTIMEINDATEFORMAT>
+                        </LEVEL>
+                        <LEVEL DATATYPE="DATE">
+                            <UNIQUENAME>
+                                <![CDATA[DIMENSION_LEVEL_86]]>
+                            </UNIQUENAME>
+                            <NAME>
+                                <![CDATA[Day]]>
+                            </NAME>
+                            <FULLY_QUALIFIED_NAME>
+                                <![CDATA[DIMENSION_LEVEL_83,DIMENSION_LEVEL_85]]>
+                            </FULLY_QUALIFIED_NAME>
+                            <DATAFIELD QUERY_ID="14423825035413127093052152974199_0" QUERY_NAME="Coffee Store">
+                                <![CDATA[Date]]>
+                            </DATAFIELD>
+                            <DISPLAYFIELD QUERY_ID="" QUERY_NAME=""/>
+                            <DATEDATATYPE>
+                                <![CDATA[Day]]>
+                            </DATEDATATYPE>
+                            <FIELDDATATYPE/>
+                            <GEOROLE/>
+                            <MAPLEVEL/>
+                            <HASTIMEINDATEFORMAT>
+                                <![CDATA[false]]>
+                            </HASTIMEINDATEFORMAT>
+                        </LEVEL>
+                    </LEVELS>
+                </HIERARCHY>
+            </HIERARCHIES>
+            <ATTRS>
+                <ATTR DATATYPE="DATE" DISPLAY_FOLDER="">
+                    <UNIQUENAME>
+                        <![CDATA[DIMENSION_ATTRIBUTE_20]]>
+                    </UNIQUENAME>
+                    <NAME>
+                        <![CDATA[Date]]>
+                    </NAME>
+                    <DATAFIELD QUERY_ID="14423825035413127093052152974199_0" QUERY_NAME="Coffee Store">
+                        <![CDATA[Date]]>
+                    </DATAFIELD>
+                    <DISPLAYFIELD QUERY_ID="14423825035413127093052152974199_0" QUERY_NAME="Coffee Store">
+                        <![CDATA[Date]]>
+                    </DISPLAYFIELD>
+                    <DATEDATATYPE/>
+                    <FIELDDATATYPE/>
+                    <GEOROLE/>
+                    <MAPLEVEL/>
+                    <TYPE>
+                        <![CDATA[Regular]]>
+                    </TYPE>
+                    <HASTIMEINDATEFORMAT>
+                        <![CDATA[false]]>
+                    </HASTIMEINDATEFORMAT>
+                </ATTR>
+            </ATTRS>
+            <CALC_MEMBERS></CALC_MEMBERS>
+        </DIMENSION>
+    </DIMENSIONS>
+    <MEASURE_GROUPS>
+        <MEASURE_GROUP ISVISIBLE="false" NAME="Delta">
+            <MEASURE_ID>
+                <![CDATA[MEASURE_77]]>
+            </MEASURE_ID>
+            <MEASURE_ID>
+                <![CDATA[MEASURE_118]]>
+            </MEASURE_ID>
+            <MEASURE_ID>
+                <![CDATA[MEASURE_119]]>
+            </MEASURE_ID>
+            <MEASURE_ID>
+                <![CDATA[MEASURE_121]]>
+            </MEASURE_ID>
+        </MEASURE_GROUP>
+        <MEASURE_GROUP ISVISIBLE="true" NAME="Actual">
+            <MEASURE_ID>
+                <![CDATA[MEASURE_24]]>
+            </MEASURE_ID>
+            <MEASURE_ID>
+                <![CDATA[MEASURE_26]]>
+            </MEASURE_ID>
+            <MEASURE_ID>
+                <![CDATA[MEASURE_27]]>
+            </MEASURE_ID>
+            <MEASURE_ID>
+                <![CDATA[MEASURE_28]]>
+            </MEASURE_ID>
+            <MEASURE_ID>
+                <![CDATA[MEASURE_35]]>
+            </MEASURE_ID>
+            <MEASURE_ID>
+                <![CDATA[MEASURE_36]]>
+            </MEASURE_ID>
+            <MEASURE_ID>
+                <![CDATA[MEASURE_37]]>
+            </MEASURE_ID>
+        </MEASURE_GROUP>
+        <MEASURE_GROUP ISVISIBLE="true" NAME="Targets">
+            <MEASURE_ID>
+                <![CDATA[MEASURE_29]]>
+            </MEASURE_ID>
+            <MEASURE_ID>
+                <![CDATA[MEASURE_30]]>
+            </MEASURE_ID>
+            <MEASURE_ID>
+                <![CDATA[MEASURE_32]]>
+            </MEASURE_ID>
+            <MEASURE_ID>
+                <![CDATA[MEASURE_34]]>
+            </MEASURE_ID>
+            <MEASURE_ID>
+                <![CDATA[MEASURE_102]]>
+            </MEASURE_ID>
+        </MEASURE_GROUP>
+    </MEASURE_GROUPS>
+    <MEASURES>
+        <MEASURE DATATYPE="NUMBER" DISPLAY_FOLDER="" ID="MEASURE_77" ISDEFAULT="false" ISVISIBLE="false" SOLVE_ORDER="0">
+            <UNIQUENAME>
+                <![CDATA[MEASURE_77]]>
+            </UNIQUENAME>
+            <NAME>
+                <![CDATA[Profit Percent]]>
+            </NAME>
+            <FORMAT USEDEFAULT="0">
+                <![CDATA[0.0%]]>
+            </FORMAT>
+            <FORMATTYPE>
+                <![CDATA[6]]>
+            </FORMATTYPE>
+            <UNIT/>
+            <DATAFIELD QUERY_ID="" QUERY_NAME=""/>
+            <EXPRESSION NON_EMPTY_BEHAVIOR="BY_MEASURE">
+                <![CDATA[([Measures].[Profit] / [Measures].[Target Profit])]]>
+            </EXPRESSION>
+        </MEASURE>
+        <MEASURE DATATYPE="NUMBER" DISPLAY_FOLDER="" ID="MEASURE_118" ISDEFAULT="false" ISVISIBLE="false" SOLVE_ORDER="0">
+            <UNIQUENAME>
+                <![CDATA[MEASURE_118]]>
+            </UNIQUENAME>
+            <NAME>
+                <![CDATA[Sales Percent]]>
+            </NAME>
+            <FORMAT USEDEFAULT="0">
+                <![CDATA[0.0%]]>
+            </FORMAT>
+            <FORMATTYPE>
+                <![CDATA[2]]>
+            </FORMATTYPE>
+            <UNIT/>
+            <DATAFIELD QUERY_ID="" QUERY_NAME=""/>
+            <EXPRESSION NON_EMPTY_BEHAVIOR="BY_MEASURE">
+                <![CDATA[([Measures].[Sales] / [Measures].[Target Sales])]]>
+            </EXPRESSION>
+        </MEASURE>
+        <MEASURE DATATYPE="NUMBER" DISPLAY_FOLDER="" ID="MEASURE_119" ISDEFAULT="false" ISVISIBLE="false" SOLVE_ORDER="0">
+            <UNIQUENAME>
+                <![CDATA[MEASURE_119]]>
+            </UNIQUENAME>
+            <NAME>
+                <![CDATA[Margin Percent]]>
+            </NAME>
+            <FORMAT USEDEFAULT="0">
+                <![CDATA[0.0%]]>
+            </FORMAT>
+            <FORMATTYPE>
+                <![CDATA[2]]>
+            </FORMATTYPE>
+            <UNIT/>
+            <DATAFIELD QUERY_ID="" QUERY_NAME=""/>
+            <EXPRESSION NON_EMPTY_BEHAVIOR="BY_MEASURE">
+                <![CDATA[([Measures].[Margin] / [Measures].[Target Margin])]]>
+            </EXPRESSION>
+        </MEASURE>
+        <MEASURE DATATYPE="NUMBER" DISPLAY_FOLDER="" ID="MEASURE_121" ISDEFAULT="false" ISVISIBLE="false" SOLVE_ORDER="0">
+            <UNIQUENAME>
+                <![CDATA[MEASURE_121]]>
+            </UNIQUENAME>
+            <NAME>
+                <![CDATA[COGS Percent]]>
+            </NAME>
+            <FORMAT USEDEFAULT="0">
+                <![CDATA[0.0%]]>
+            </FORMAT>
+            <FORMATTYPE>
+                <![CDATA[2]]>
+            </FORMATTYPE>
+            <UNIT/>
+            <DATAFIELD QUERY_ID="" QUERY_NAME=""/>
+            <EXPRESSION NON_EMPTY_BEHAVIOR="BY_MEASURE">
+                <![CDATA[([Measures].[COGS] / [Measures].[Target COGS])]]>
+            </EXPRESSION>
+        </MEASURE>
+        <MEASURE DATATYPE="NUMBER" DISPLAY_FOLDER="" ID="MEASURE_24" ISDEFAULT="false" ISVISIBLE="true" SOLVE_ORDER="0">
+            <UNIQUENAME>
+                <![CDATA[MEASURE_24]]>
+            </UNIQUENAME>
+            <NAME>
+                <![CDATA[COGS]]>
+            </NAME>
+            <FORMAT USEDEFAULT="0">
+                <![CDATA[$#,##0]]>
+            </FORMAT>
+            <FORMATTYPE>
+                <![CDATA[3]]>
+            </FORMATTYPE>
+            <UNIT/>
+            <DATAFIELD QUERY_ID="14423825035413127093052152974199_0" QUERY_NAME="Coffee Store">
+                <![CDATA[Budget COGS]]>
+            </DATAFIELD>
+            <EXPRESSION NON_EMPTY_BEHAVIOR="BY_MEASURE"/>
+            <SUMMARYFUNCTION>
+                <![CDATA[0]]>
+            </SUMMARYFUNCTION>
+        </MEASURE>
+        <MEASURE DATATYPE="NUMBER" DISPLAY_FOLDER="" ID="MEASURE_26" ISDEFAULT="false" ISVISIBLE="true" SOLVE_ORDER="0">
+            <UNIQUENAME>
+                <![CDATA[MEASURE_26]]>
+            </UNIQUENAME>
+            <NAME>
+                <![CDATA[Margin]]>
+            </NAME>
+            <FORMAT USEDEFAULT="0">
+                <![CDATA[$#,##0]]>
+            </FORMAT>
+            <FORMATTYPE>
+                <![CDATA[3]]>
+            </FORMATTYPE>
+            <UNIT/>
+            <DATAFIELD QUERY_ID="14423825035413127093052152974199_0" QUERY_NAME="Coffee Store">
+                <![CDATA[Budget Margin]]>
+            </DATAFIELD>
+            <EXPRESSION NON_EMPTY_BEHAVIOR="BY_MEASURE"/>
+            <SUMMARYFUNCTION>
+                <![CDATA[0]]>
+            </SUMMARYFUNCTION>
+        </MEASURE>
+        <MEASURE DATATYPE="NUMBER" DISPLAY_FOLDER="" ID="MEASURE_27" ISDEFAULT="true" ISVISIBLE="true" SOLVE_ORDER="0">
+            <UNIQUENAME>
+                <![CDATA[MEASURE_27]]>
+            </UNIQUENAME>
+            <NAME>
+                <![CDATA[Profit]]>
+            </NAME>
+            <FORMAT USEDEFAULT="0">
+                <![CDATA[$#,##0]]>
+            </FORMAT>
+            <FORMATTYPE>
+                <![CDATA[3]]>
+            </FORMATTYPE>
+            <UNIT/>
+            <DATAFIELD QUERY_ID="14423825035413127093052152974199_0" QUERY_NAME="Coffee Store">
+                <![CDATA[Budget Profit]]>
+            </DATAFIELD>
+            <EXPRESSION NON_EMPTY_BEHAVIOR="BY_MEASURE"/>
+            <SUMMARYFUNCTION>
+                <![CDATA[0]]>
+            </SUMMARYFUNCTION>
+        </MEASURE>
+        <MEASURE DATATYPE="NUMBER" DISPLAY_FOLDER="" ID="MEASURE_28" ISDEFAULT="false" ISVISIBLE="true" SOLVE_ORDER="0">
+            <UNIQUENAME>
+                <![CDATA[MEASURE_28]]>
+            </UNIQUENAME>
+            <NAME>
+                <![CDATA[Sales]]>
+            </NAME>
+            <FORMAT USEDEFAULT="0">
+                <![CDATA[$#,##0]]>
+            </FORMAT>
+            <FORMATTYPE>
+                <![CDATA[3]]>
+            </FORMATTYPE>
+            <UNIT/>
+            <DATAFIELD QUERY_ID="14423825035413127093052152974199_0" QUERY_NAME="Coffee Store">
+                <![CDATA[Budget Sales]]>
+            </DATAFIELD>
+            <EXPRESSION NON_EMPTY_BEHAVIOR="BY_MEASURE"/>
+            <SUMMARYFUNCTION>
+                <![CDATA[0]]>
+            </SUMMARYFUNCTION>
+        </MEASURE>
+        <MEASURE DATATYPE="NUMBER" DISPLAY_FOLDER="" ID="MEASURE_35" ISDEFAULT="false" ISVISIBLE="true" SOLVE_ORDER="0">
+            <UNIQUENAME>
+                <![CDATA[MEASURE_35]]>
+            </UNIQUENAME>
+            <NAME>
+                <![CDATA[Inventory]]>
+            </NAME>
+            <FORMAT USEDEFAULT="0">
+                <![CDATA[$#,##0]]>
+            </FORMAT>
+            <FORMATTYPE>
+                <![CDATA[3]]>
+            </FORMATTYPE>
+            <UNIT/>
+            <DATAFIELD QUERY_ID="14423825035413127093052152974199_0" QUERY_NAME="Coffee Store">
+                <![CDATA[Inventory]]>
+            </DATAFIELD>
+            <EXPRESSION NON_EMPTY_BEHAVIOR="BY_MEASURE"/>
+            <SUMMARYFUNCTION>
+                <![CDATA[0]]>
+            </SUMMARYFUNCTION>
+        </MEASURE>
+        <MEASURE DATATYPE="NUMBER" DISPLAY_FOLDER="" ID="MEASURE_36" ISDEFAULT="false" ISVISIBLE="true" SOLVE_ORDER="0">
+            <UNIQUENAME>
+                <![CDATA[MEASURE_36]]>
+            </UNIQUENAME>
+            <NAME>
+                <![CDATA[Marketing]]>
+            </NAME>
+            <FORMAT USEDEFAULT="0">
+                <![CDATA[$#,##0]]>
+            </FORMAT>
+            <FORMATTYPE>
+                <![CDATA[3]]>
+            </FORMATTYPE>
+            <UNIT/>
+            <DATAFIELD QUERY_ID="14423825035413127093052152974199_0" QUERY_NAME="Coffee Store">
+                <![CDATA[Marketing]]>
+            </DATAFIELD>
+            <EXPRESSION NON_EMPTY_BEHAVIOR="BY_MEASURE"/>
+            <SUMMARYFUNCTION>
+                <![CDATA[0]]>
+            </SUMMARYFUNCTION>
+        </MEASURE>
+        <MEASURE DATATYPE="NUMBER" DISPLAY_FOLDER="" ID="MEASURE_37" ISDEFAULT="false" ISVISIBLE="true" SOLVE_ORDER="0">
+            <UNIQUENAME>
+                <![CDATA[MEASURE_37]]>
+            </UNIQUENAME>
+            <NAME>
+                <![CDATA[Total Expenses]]>
+            </NAME>
+            <FORMAT USEDEFAULT="0">
+                <![CDATA[$#,##0]]>
+            </FORMAT>
+            <FORMATTYPE>
+                <![CDATA[3]]>
+            </FORMATTYPE>
+            <UNIT/>
+            <DATAFIELD QUERY_ID="14423825035413127093052152974199_0" QUERY_NAME="Coffee Store">
+                <![CDATA[Total Expenses]]>
+            </DATAFIELD>
+            <EXPRESSION NON_EMPTY_BEHAVIOR="BY_MEASURE"/>
+            <SUMMARYFUNCTION>
+                <![CDATA[0]]>
+            </SUMMARYFUNCTION>
+        </MEASURE>
+        <MEASURE DATATYPE="NUMBER" DISPLAY_FOLDER="" ID="MEASURE_29" ISDEFAULT="false" ISVISIBLE="true" SOLVE_ORDER="0">
+            <UNIQUENAME>
+                <![CDATA[MEASURE_29]]>
+            </UNIQUENAME>
+            <NAME>
+                <![CDATA[Target COGS]]>
+            </NAME>
+            <FORMAT USEDEFAULT="0">
+                <![CDATA[$#,##0]]>
+            </FORMAT>
+            <FORMATTYPE>
+                <![CDATA[3]]>
+            </FORMATTYPE>
+            <UNIT/>
+            <DATAFIELD QUERY_ID="14423825035413127093052152974199_0" QUERY_NAME="Coffee Store">
+                <![CDATA[COGS]]>
+            </DATAFIELD>
+            <EXPRESSION NON_EMPTY_BEHAVIOR="BY_MEASURE"/>
+            <SUMMARYFUNCTION>
+                <![CDATA[0]]>
+            </SUMMARYFUNCTION>
+        </MEASURE>
+        <MEASURE DATATYPE="NUMBER" DISPLAY_FOLDER="" ID="MEASURE_30" ISDEFAULT="false" ISVISIBLE="true" SOLVE_ORDER="0">
+            <UNIQUENAME>
+                <![CDATA[MEASURE_30]]>
+            </UNIQUENAME>
+            <NAME>
+                <![CDATA[Target Margin]]>
+            </NAME>
+            <FORMAT USEDEFAULT="0">
+                <![CDATA[$#,##0]]>
+            </FORMAT>
+            <FORMATTYPE>
+                <![CDATA[3]]>
+            </FORMATTYPE>
+            <UNIT/>
+            <DATAFIELD QUERY_ID="14423825035413127093052152974199_0" QUERY_NAME="Coffee Store">
+                <![CDATA[Margin]]>
+            </DATAFIELD>
+            <EXPRESSION NON_EMPTY_BEHAVIOR="BY_MEASURE"/>
+            <SUMMARYFUNCTION>
+                <![CDATA[0]]>
+            </SUMMARYFUNCTION>
+        </MEASURE>
+        <MEASURE DATATYPE="NUMBER" DISPLAY_FOLDER="" ID="MEASURE_32" ISDEFAULT="false" ISVISIBLE="true" SOLVE_ORDER="0">
+            <UNIQUENAME>
+                <![CDATA[MEASURE_32]]>
+            </UNIQUENAME>
+            <NAME>
+                <![CDATA[Target Profit]]>
+            </NAME>
+            <FORMAT USEDEFAULT="0">
+                <![CDATA[$#,##0]]>
+            </FORMAT>
+            <FORMATTYPE>
+                <![CDATA[3]]>
+            </FORMATTYPE>
+            <UNIT/>
+            <DATAFIELD QUERY_ID="14423825035413127093052152974199_0" QUERY_NAME="Coffee Store">
+                <![CDATA[Profit]]>
+            </DATAFIELD>
+            <EXPRESSION NON_EMPTY_BEHAVIOR="BY_MEASURE"/>
+            <SUMMARYFUNCTION>
+                <![CDATA[0]]>
+            </SUMMARYFUNCTION>
+        </MEASURE>
+        <MEASURE DATATYPE="NUMBER" DISPLAY_FOLDER="" ID="MEASURE_34" ISDEFAULT="false" ISVISIBLE="true" SOLVE_ORDER="0">
+            <UNIQUENAME>
+                <![CDATA[MEASURE_34]]>
+            </UNIQUENAME>
+            <NAME>
+                <![CDATA[Target Sales]]>
+            </NAME>
+            <FORMAT USEDEFAULT="0">
+                <![CDATA[$#,##0]]>
+            </FORMAT>
+            <FORMATTYPE>
+                <![CDATA[3]]>
+            </FORMATTYPE>
+            <UNIT/>
+            <DATAFIELD QUERY_ID="14423825035413127093052152974199_0" QUERY_NAME="Coffee Store">
+                <![CDATA[Sales]]>
+            </DATAFIELD>
+            <EXPRESSION NON_EMPTY_BEHAVIOR="BY_MEASURE"/>
+            <SUMMARYFUNCTION>
+                <![CDATA[0]]>
+            </SUMMARYFUNCTION>
+        </MEASURE>
+        <MEASURE DATATYPE="NUMBER" DISPLAY_FOLDER="" ID="MEASURE_102" ISDEFAULT="false" ISVISIBLE="true" SOLVE_ORDER="0">
+            <UNIQUENAME>
+                <![CDATA[MEASURE_102]]>
+            </UNIQUENAME>
+            <NAME>
+                <![CDATA[Count_Measure]]>
+            </NAME>
+            <FORMAT USEDEFAULT="0">
+                <![CDATA[#,##0.00]]>
+            </FORMAT>
+            <FORMATTYPE>
+                <![CDATA[2]]>
+            </FORMATTYPE>
+            <UNIT/>
+            <DATAFIELD QUERY_ID="" QUERY_NAME=""/>
+            <EXPRESSION NON_EMPTY_BEHAVIOR="BY_MEASURE">
+                <![CDATA[Count(Filter([Market].[Hierarchy].[Market Size].Members, MeasureFilter([Measures].[Target Sales],'>',100000) ))]]>
+            </EXPRESSION>
+        </MEASURE>
+    </MEASURES>
+</CUBEOBJECT>undefined</SPECIFIC>undefined</IRO>
